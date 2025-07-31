@@ -1278,3 +1278,65 @@ WHERE e1.salary > (
     FROM employees e2
     WHERE e2.department = 'Finance'
 );
+
+
+=======================
+class Animal
+{
+	public void eat()
+	{
+		System.out.println("Animal is eating");
+	}
+}
+class Dog extends Animal
+{
+	public void eat()
+	{
+		System.out.println("Dog is eating");
+	}
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		Dog d = new Dog();
+		d.eat();
+	}
+}
+
+result : Dog is eating
+
+3 radiobox
+
+import {useState} from "react";
+
+funtion Radio()
+{
+
+	const[option, selectOption] = useState("option1");
+	
+	const handleClick = (event) => {
+		selectOption(event.target.value)
+	}
+	
+	return(
+		<div>
+			
+			<input type = "radio" value="option1">
+				checked={selectOption === "option1"}
+				onChange={handleClick}
+			</input>
+			
+			<input type = "radio" value="option2">
+				checked={selectOption === "option2"}
+				onChange={handleClick}
+			</input>
+			
+			<input type = "radio" value="option3">
+				checked={selectOption === "option3"}
+				onChange={handleClick}
+			</input>
+		
+		</div>
+	);
+}
